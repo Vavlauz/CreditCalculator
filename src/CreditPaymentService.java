@@ -1,13 +1,13 @@
 public class CreditPaymentService {
     public double calculate(double total, int creditMonths) {
         double monthRate = 9.99 / creditMonths / 100;
-        if (creditMonths <= 12 && creditMonths > 0) {
+        if (creditMonths == 12) {
             monthRate = 9.99 / creditMonths / 100;
         }
-        if (creditMonths <= 24 && creditMonths > 12) {
+        if (creditMonths == 24) {
             monthRate = (9.99 / creditMonths / 100) * 2;
         }
-        if (creditMonths <= 36 && creditMonths > 24) {
+        if (creditMonths == 36) {
             monthRate = (9.99 / creditMonths / 100) * 3;
         }
         double amount = 1.00 + monthRate;
